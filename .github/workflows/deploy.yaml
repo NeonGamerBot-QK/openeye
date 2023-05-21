@@ -16,5 +16,5 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: |
-            cd /${{ secrets.HOST }}
+            cd /${{ secrets.USERNAME }}
             PUBLIC_URL=/${{ github.event.repository.name }} bash ./deploy_project.sh ${{ github.event.repository.name }} ${{ github.event.repository.name }} "npm install" "npm run build"
